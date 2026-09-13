@@ -1,144 +1,122 @@
 # VOCA — AI English Speaking Coach
 
-Practice speaking English. Get instant AI feedback. Build confidence through conversation.
+> Practice speaking English. Get instant AI feedback. Build confidence through conversation.
 
-VOCA is an interactive web application designed to help learners improve their English speaking skills through spontaneous practice. Users select a difficulty level, receive a random topic, and speak their response. Behind the scenes, VOCA transcribes the speech and leverages the Google Gemini API to provide an in-depth, structured evaluation of their performance.
+VOCA is an AI-powered English speaking coach that helps learners practice spontaneous speaking and receive personalized feedback on their responses.
+
+Choose a difficulty, get a topic, prepare, speak, and let AI analyze your response.
 
 ## 🚀 Live Demo
 
-**GitHub Repository:** [https://github.com/teja3112/voca](https://github.com/teja3112/voca)
+**[Try VOCA →](https://voca-gamma-lovat.vercel.app)**
 
-*(Deploy this repository on Vercel to get a live production URL!)*
+**[GitHub Repository →](https://github.com/teja3112/voca)**
 
 ## ✨ Features
 
-- 🎯 **Difficulty-based speaking topics:** Beginner, Intermediate, and Advanced
-- 🎲 **Topic Roulette:** Fun, randomized topic selection
-- ⏱️ **Custom preparation time:** Get ready before speaking
-- 🎤 **Real microphone recording:** In-browser speech capture
-- 📝 **Speech-to-text transcription:** Automatic real-time transcription
-- 🤖 **Gemini-powered AI evaluation:** Intelligent analysis powered by Gemini 3.6 Flash
-- 📊 **Seven-category speaking assessment:** Detailed, actionable metrics
-- 🧠 **Topic relevance analysis:** Strict scoring on whether the topic was actually answered
-- ⏱️ **Duration-aware scoring:** Evaluates whether you used your target speaking time effectively
-- ✍️ **Grammar Coach:** Specific grammar corrections based on your transcript
-- 💬 **Vocabulary improvement suggestions:** Better word choices for your exact sentences
-- 📈 **Local progress tracking:** Review past sessions and scores
-- 🔄 **Practice Again flow:** Seamlessly start a new session
-- 🛡️ **Error handling:** Graceful fallbacks for microphone denial, short transcripts, and API drops
-- 🔐 **Server-side Gemini API key protection:** Safe Vercel Serverless integration
+- 🎯 Beginner, Intermediate & Advanced speaking levels
+- 🎲 Topic Roulette for spontaneous topic selection
+- ⏱️ Custom preparation and speaking duration
+- 🎤 Real microphone recording
+- 📝 Speech-to-text transcription
+- 🤖 Gemini-powered AI evaluation
+- 📊 Seven-category speaking assessment
+- 🧠 Topic relevance analysis
+- ⏱️ Duration-aware scoring
+- ✍️ Personalized grammar corrections
+- 💬 Vocabulary improvement suggestions
+- 📈 Local progress tracking
+- 🔄 Practice Again
 
 ## 📊 AI Evaluation
 
-VOCA evaluates speaking across seven distinct categories to give you a complete picture of your language skills:
+VOCA evaluates each response across seven categories:
 
 ### Language
-- **Fluency:** Smoothness, pacing, and continuity of speech
-- **Grammar:** Accuracy of tenses, sentence structures, and mechanics
-- **Vocabulary:** Range, precision, and appropriateness of word choices
-- **Clarity:** How understandable and clear the spoken ideas are
+- **Fluency** — Continuity and natural flow
+- **Grammar** — Accuracy and sentence construction
+- **Vocabulary** — Range and word choice
+- **Clarity** — How clearly ideas are communicated
 
 ### Content
-- **Relevance:** Did the response directly address the selected topic?
-- **Structure:** Are the ideas organized logically?
-- **Development:** Are the thoughts well-expanded with examples and details?
+- **Relevance** — How directly the response answers the topic
+- **Structure** — Organization and logical flow
+- **Development** — How well ideas are explained and supported
 
-**Smart Context Awareness:**
-VOCA's evaluation dynamically adapts to the selected difficulty level. Furthermore, it incorporates strict topic adherence (penalizing off-topic responses heavily in Relevance) and duration-aware scoring (adjusting Development expectations based on how much of the target time was utilized).
+The evaluation adapts to the selected difficulty, topic, and speaking duration to provide more meaningful feedback.
 
-## 🔄 How It Works
-
-1. **Home** - Welcome screen and entry point
-2. **Setup** - Select your desired difficulty, prep time, and target speaking time
-3. **Topic Roulette** - An engaging reel animation picks your topic
-4. **Topic Reveal** - Your specific topic is displayed
-5. **Preparation** - A countdown gives you time to organize your thoughts
-6. **Speaking** - Microphone records your response while displaying remaining time
-7. **AI Analysis** - The response is transcribed and sent securely to the AI backend
-8. **Results** - View your 0-100 overall score, category breakdown, and personalized feedback
-9. **Progress** - Track your historical performance across sessions
-
-## 🛠️ Tech Stack
-
-- **Frontend:** React 19, TypeScript, Vite
-- **Styling:** Tailwind CSS v4
-- **Backend (Production):** Vercel Serverless Functions
-- **Backend (Local):** Node.js HTTP Server
-- **AI Integration:** Google Gemini API
-- **Storage:** Browser LocalStorage
-
-## 🏗️ Architecture
-
-VOCA uses a hybrid architecture to ensure the frontend is fast and static while keeping API keys completely secure on the backend.
+## ⚡ How It Works
 
 ```text
-Browser (React + Vite)
-   ↓
-POST /api/analyze (Contains transcript, topic, duration)
-   ↓
-Vercel Serverless Function (api/analyze.js)
-   ↓
+Choose Difficulty
+       ↓
+Get a Topic
+       ↓
+Prepare
+       ↓
+Speak
+       ↓
+AI Analysis
+       ↓
+Personalized Feedback
+       ↓
+Track Progress
+🛠️ Built With
+React
+TypeScript
+Vite
+Tailwind CSS
+Node.js
+Vercel
 Google Gemini API
-   ↓
-AI Evaluation JSON
-   ↓
-Results UI
-```
-
-The `GEMINI_API_KEY` remains safely isolated on the server-side and is **never** exposed to the client browser.
-
-## 📁 Project Structure
-
-```text
-voca/
-├── api/
-│   └── analyze.js         # Production Vercel Serverless Function
-├── server/
-│   └── index.js           # Local development Node.js API server
-├── src/
-│   ├── lib/               # Utility functions, Gemini API bindings, storage logic
-│   ├── screens/           # React components for each step in the flow
-│   ├── App.tsx            # Main application router and state
-│   ├── main.tsx           # React DOM entry point
-│   └── index.css          # Tailwind and global styles
-├── public/                # Static public assets
-├── package.json           # Dependencies and scripts
-├── vite.config.ts         # Vite bundler configuration (includes local API proxy)
-├── tsconfig.json          # TypeScript compiler configuration
-└── README.md              # Project documentation
-```
-
-## ⚙️ Local Development
-
-To run VOCA on your local machine, follow these steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/teja3112/voca.git
-   cd voca
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables:**
-   Create a `.env` file in the root directory and add your Google Gemini API key:
-   ```env
-   GEMINI_API_KEY=your_api_key_here
-   ```
-
-4. **Start the local development server (Frontend + Backend proxy):**
-   
-   *(In one terminal, start the backend)*
-   ```bash
-   node --env-file=.env server/index.js
-   ```
-   
-   *(In a second terminal, start Vite)*
-   ```bash
-   npm run dev
-   ```
-
-5. Open your browser and navigate to the localhost URL provided by Vite.
+🧠 Vision
+VOCA's long-term goal is to become an adaptive AI communication coach that helps people become better speakers for real-world situations.
+The vision goes beyond everyday English practice to support:
+🇬🇧 IELTS Speaking
+🌎 TOEFL & TOEIC
+💼 HR Interviews
+💻 Technical Interviews
+🎓 Campus Placements
+👥 Group Discussions
+🎤 Presentations
+🧑‍💼 Business Communication
+🗣️ Public Speaking
+🗺️ Future Roadmap
+Smarter Speaking
+Pronunciation analysis
+Speaking pace analysis
+Filler-word detection
+Pause analysis
+More advanced speech feedback
+Personalized Learning
+Adaptive difficulty
+Personalized practice plans
+Weak-area detection
+Personalized topic recommendations
+Learning streaks and milestones
+Long-term progress insights
+Exam & Career Preparation
+IELTS Speaking mode
+TOEFL Speaking mode
+TOEIC Speaking mode
+HR interview mode
+Technical interview mode
+Campus placement preparation
+Group Discussion practice
+Debate practice
+Presentation practice
+Business communication practice
+Platform Expansion
+User accounts
+Cloud progress synchronization
+Mobile application
+Teacher / mentor dashboard
+College and institutional version
+Support for additional AI models
+🔐 Security
+VOCA keeps the Gemini API key on the server side.
+Production requests are handled through a Vercel Serverless Function, while the API key is stored securely using environment variables and is never exposed to the browser.
+📌 Current Status
+Live and actively evolving.
+VOCA currently focuses on spontaneous English speaking practice and AI-powered feedback, with the goal of evolving into a broader AI communication coaching platform.
+a
