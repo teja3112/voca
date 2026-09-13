@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.env
+.env.*
+!.env.example
+scratch/
+*.backup
+*.orig
+response.json
+AGENTS.md
+CLAUDE.md
+.mise.tomla
