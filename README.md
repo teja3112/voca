@@ -10,6 +10,8 @@ Choose a difficulty, get a topic, prepare, speak, and let AI analyze your respon
 
 **[Try VOCA →](https://voca-gamma-lovat.vercel.app)**
 
+> **💻 Platform Notice:** VOCA is currently optimized for **laptop and desktop browsers**. Mobile browser support is not available yet. Mobile support is planned for a future release.
+
 ## ✨ Features
 
 - Beginner, Intermediate & Advanced speaking levels
