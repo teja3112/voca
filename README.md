@@ -140,14 +140,7 @@ These capabilities are part of VOCA's future roadmap and are not currently avail
 - [ ] Debate practice
 - [ ] Presentation practice
 - [ ] Business communication practice
-
-    
-
-## 🔐 Security
-
-VOCA keeps the Gemini API key on the server side.
-
-Production requests are handled through a Vercel Serverless Function, while the API key is stored securely using environment variables and is never exposed to the browser.
+      
 
 ## 📌 Current Status
 
