@@ -6,12 +6,6 @@ VOCA is an AI-powered English speaking coach that helps learners practice sponta
 
 Choose a difficulty, get a topic, prepare, speak, and let AI analyze your response.
 
-## 🚀 Live Demo
-
-**[Try VOCA →](https://voca-gamma-lovat.vercel.app)**
-
-> **💻 Platform Notice:** VOCA is currently optimized for **laptop and desktop browsers**. Mobile browser support is not available yet. Mobile support is planned for a future release.
-
 ## ✨ Features
 
 - Beginner, Intermediate & Advanced speaking levels
