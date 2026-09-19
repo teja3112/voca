@@ -132,6 +132,17 @@ These capabilities are part of VOCA's future roadmap and are not currently avail
 - [ ] College and institutional version
 - [ ] Support for additional AI models
 
+ ### Speaking Practice
+
+- [ ] Custom topic practice
+- [ ] Campus placement preparation
+- [ ] Group Discussion practice
+- [ ] Debate practice
+- [ ] Presentation practice
+- [ ] Business communication practice
+
+    
+
 ## 🔐 Security
 
 VOCA keeps the Gemini API key on the server side.
