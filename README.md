@@ -6,6 +6,14 @@ VOCA is an AI-powered English speaking coach that helps learners practice sponta
 
 Choose a difficulty, get a topic, prepare, speak, and let AI analyze your response.
 
+## 🎥 Product Demo
+
+Watch VOCA in action — from choosing a difficulty and topic to speaking and receiving personalized AI feedback.
+
+[▶️ Watch the VOCA Demo](./assets/voca-demo.mp4)
+
+> 💻 **Platform:** VOCA is currently optimized for **laptop and desktop browsers**. Mobile support is planned for a future release.
+
 ## ✨ Features
 
 - Beginner, Intermediate & Advanced speaking levels
